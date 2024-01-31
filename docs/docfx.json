@@ -1,0 +1,56 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../src",
+          "files": [
+            "**/*.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "*.{md,yml}",
+          "articles/**/*.{md,yml}"
+        ],
+        "exclude": [
+        ]
+      },
+      {
+        "files": [
+          "restapi/*.{md,yml}",
+          "restapi/Swagger/**",
+          "restapi/OpenAPI/**/*.md",
+          
+        ],
+        "exclude": [
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "restapi/OpenAPI/**/*.{json,yml}"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "",
+      "_appTitle": "",
+      "_enableSearch": true,
+      "_noindex": true,
+      "pdf": true
+    }
+  }
+}
